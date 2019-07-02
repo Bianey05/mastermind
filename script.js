@@ -186,7 +186,11 @@ function showGameResults(result) {
     Winning code: gameResultElement.insertAdjacentHTML("beforeend", "<h2>You broke the code!</h2>");
     Losing code: gameResultElement.insertAdjacentHTML("beforeend", "<h2>Better luck next time!</h2>");
   */
-
+if(results) {
+  gameResultElement.insertAdjacentHTML("beforeend", "<h2>You won! </h2>")
+} else {
+  gameResultElement.insertAdjacentHTML("beforeend", "<h2>Better luck next time!</h2>");
+}
   // show reset button
   reset.classList.remove("hidden");
   // hide instructions & submit button
